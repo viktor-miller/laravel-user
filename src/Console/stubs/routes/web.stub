@@ -1,0 +1,4 @@
+/**
+ * User base routes
+ */
+User::routes();

@@ -1,0 +1,36 @@
+{
+    "name": "viktor-miller/laravel-user",
+    "description": "laravel user package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Viktor Miller",
+            "email": "phpfriq@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ViktorMiller\\LaravelUser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": { 
+            "ViktorMiller\\LaravelUser\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ViktorMiller\\LaravelUser\\ServiceProvider"
+            ],
+            "aliases": {
+                "User": "ViktorMiller\\LaravelUser\\Facades\\User"
+            }
+        }
+    }
+}

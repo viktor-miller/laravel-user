@@ -1,0 +1,32 @@
+<?php
+
+namespace {{namespace}}Http\Controllers\User;
+
+use App\Http\Controllers\Controller;
+use ViktorMiller\LaravelUser\Http\Delete;
+
+/**
+ * 
+ * @package  laravel-user
+ * @author   Viktor Miller <phpfriq@gmail.com>
+ */
+class DeleteController extends Controller
+{
+    /*
+    |--------------------------------------------------------------------------
+    | User Delete Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles the deletion of the user. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+    
+    use Delete;
+    
+    public function __construct()
+    {   
+        $this->middleware('auth');
+    }
+}
+

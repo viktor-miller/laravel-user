@@ -1,0 +1,32 @@
+<?php
+
+namespace {{namespace}}Http\Controllers\User;
+
+use App\Http\Controllers\Controller;
+use ViktorMiller\LaravelUser\Http\UpdateData;
+
+/**
+ * 
+ * @package  laravel-user
+ * @author   Viktor Miller <phpfriq@gmail.com>
+ */
+class DataController extends Controller
+{
+    /*
+    |--------------------------------------------------------------------------
+    | User Data Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles the update of the user data. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+    
+    use UpdateData;
+    
+    public function __construct()
+    {   
+        $this->middleware('auth');
+    }
+}
+

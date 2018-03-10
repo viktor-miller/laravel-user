@@ -1,0 +1,32 @@
+<?php
+
+namespace {{namespace}}Http\Controllers\User;
+
+use App\Http\Controllers\Controller;
+use ViktorMiller\LaravelUser\Http\UpdateEmail;
+
+/**
+ * 
+ * @package  laravel-user
+ * @author   Viktor Miller <phpfriq@gmail.com>
+ */
+class EmailController extends Controller
+{
+    /*
+    |--------------------------------------------------------------------------
+    | Update Email Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles the update of the user email. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+    
+    use UpdateEmail;
+    
+    public function __construct()
+    {   
+        $this->middleware('auth');
+    }
+}
+
