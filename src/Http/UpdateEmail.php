@@ -40,7 +40,7 @@ trait UpdateEmail
         
         event(new EmailUpdated($this->user()));
         
-        return back()->with('success', 'user.email.updated');
+        return $this->sendSuccessResponse();
     }
     
     /**
@@ -86,7 +86,19 @@ trait UpdateEmail
      */
     protected function messages()
     {
-        return [];
+        return [
+            'password.current_password' => __('user::validation.current_password')
+        ];
+    }
+    
+    /**
+     * Send success response
+     * 
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    protected function sendSuccessResponse()
+    {
+        return back()->with('success', __('user::messages.email'));
     }
     
     /**

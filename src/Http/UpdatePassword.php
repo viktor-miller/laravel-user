@@ -41,7 +41,7 @@ trait UpdatePassword
         
         event(new PasswordUpdated($this->user()));
         
-        return back()->with('success', 'user.password.updated');
+        return $this->sendSuccessResponse();
     }
     
     /**
@@ -87,7 +87,19 @@ trait UpdatePassword
      */
     protected function messages()
     {
-        return [];
+        return [
+            'password.current_password' => __('user::validation.current_password')
+        ];
+    }
+    
+    /**
+     * Send success response
+     * 
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    protected function sendSuccessResponse()
+    {
+        return back()->with('success', __('user::messages.password'));
     }
     
     /**

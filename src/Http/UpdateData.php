@@ -37,7 +37,7 @@ trait UpdateData
         
         $this->updateData($this->user(), $this->data($request));
         
-        return back()->with('success', 'user.data.updated');
+        return $this->sendSuccessResponse();
     }
     
     /**
@@ -81,6 +81,16 @@ trait UpdateData
     protected function messages()
     {
         return [];
+    }
+    
+    /**
+     * Send success response
+     * 
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    protected function sendSuccessResponse()
+    {
+        return back()->with('success', __('user::messages.updated'));
     }
     
     /**

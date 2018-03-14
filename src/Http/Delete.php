@@ -37,7 +37,7 @@ trait Delete
         
         $this->deleteUser($this->user());
         
-        return back()->with('success', 'user.deleted');
+        return $this->sendSuccessResponse();
     }
     
     /**
@@ -69,7 +69,19 @@ trait Delete
      */
     protected function messages()
     {
-        return [];
+        return [
+            'password.current_password' => __('user::validation.current_password')
+        ];
+    }
+    
+    /**
+     * Send success response
+     * 
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    protected function sendSuccessResponse()
+    {
+        return back()->with('success', __('user::messages.deleted'));
     }
     
     /**

@@ -1,13 +1,23 @@
 @extends('layouts.app')
 
+@section('alert')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            @parent
+        </div>
+    </div>
+</div>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
 
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    @lang('Main data')
+                <div class="panel-heading text-center">
+                    <h4>@lang('user::headers.data')</h4>
                 </div>
 
                 <div class="panel-body">
@@ -17,7 +27,7 @@
 
                         <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
                             <label for="firstname" class="col-md-4 control-label">
-                                @lang('Firstname')
+                                @lang('user::attributes.firstname')
                             </label>
 
                             <div class="col-md-6">
@@ -33,7 +43,7 @@
 
                         <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
                             <label for="lastname" class="col-md-4 control-label">
-                                @lang('Lastname')
+                                @lang('user::attributes.lastname')
                             </label>
 
                             <div class="col-md-6">
@@ -49,7 +59,7 @@
 
                         <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                             <label for="address" class="col-md-4 control-label">
-                                @lang('Address')
+                                @lang('user::attributes.address')
                             </label>
 
                             <div class="col-md-6">
@@ -65,7 +75,7 @@
 
                         <div class="form-group{{ $errors->has('zip') ? ' has-error' : '' }}">
                             <label for="zip" class="col-md-4 control-label">
-                                @lang('ZIP')
+                                @lang('user::attributes.postcode')
                             </label>
 
                             <div class="col-md-6">
@@ -81,7 +91,7 @@
                         
                         <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                             <label for="city" class="col-md-4 control-label">
-                                @lang('City')
+                                @lang('user::attributes.city')
                             </label>
 
                             <div class="col-md-6">
@@ -97,7 +107,7 @@
 
                         <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
                             <label for="country" class="col-md-4 control-label">
-                                @lang('Country')
+                                @lang('user::attributes.country')
                             </label>
 
                             <div class="col-md-6">
@@ -114,7 +124,7 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    @lang('Send')
+                                    @lang('user::buttons.save')
                                 </button>
                             </div>
                         </div>

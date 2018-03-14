@@ -219,7 +219,7 @@ class User extends Command
             $path = base_path($dist);
             $content = file_get_contents($stub);
             
-            if (strpos(file_get_contents($path), $content) !== false) {
+            if (strpos(file_get_contents($path), $content) !== false && ! $this->option('force')) {
                 if (! $this->confirm("The file [{$path}] already contains confirmation route. Do you want to replace it?")) {
                     continue;
                 }
