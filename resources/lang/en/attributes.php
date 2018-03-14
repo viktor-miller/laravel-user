@@ -12,6 +12,11 @@ return [
     'password' => 'Password',
     'current_password' => 'Current password',
     'new_password' => 'New password',
-    'confirm_password' => 'Confirm password'
+    'confirm_password' => 'Confirm password',
+    'phone' => 'Phone',
+    'mobile' => 'Mobile phone',
+    'fax' => 'Fax',
+    'web' => 'Website',
+    'birthday' => 'Birthday',
 ];
 

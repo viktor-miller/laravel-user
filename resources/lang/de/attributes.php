@@ -12,6 +12,11 @@ return [
     'password' => 'Passwort',
     'current_password' => 'Aktuelles Passwort',
     'new_password' => 'Neues Passwort',
-    'confirm_password' => 'Passwort wiederholen'
+    'confirm_password' => 'Passwort wiederholen',
+    'phone' => 'Telefonnummer',
+    'mobile' => 'Funk',
+    'fax' => 'Fax',
+    'web' => 'Webseite',
+    'birthday' => 'Geburtsdatum',
 ];
 

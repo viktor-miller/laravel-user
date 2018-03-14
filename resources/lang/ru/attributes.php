@@ -12,6 +12,11 @@ return [
     'password' => 'Пароль',
     'current_password' => 'Актуальный пароль',
     'new_password' => 'Новый пароль',
-    'confirm_password' => 'Повторить пароль'
+    'confirm_password' => 'Повторить пароль',
+    'phone' => 'Телефон',
+    'mobile' => 'Мобильный телефон',
+    'fax' => 'Факс',
+    'web' => 'Веб-сайт',
+    'birthday' => 'Дата рождения',
 ];
 
